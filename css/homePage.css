@@ -1,0 +1,30 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	color: white;
+}
+#div_guide{
+	width: 70%;
+	height: 50px;
+	margin: 0 auto;
+	border: 1px solid red;
+	margin-top: 10px;
+}
+#div_guide ul li{
+	width: 14%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	float: left;
+	list-style: none;
+	font-size: 26px;
+}
+#div_guide ul li:hover{
+	cursor: pointer;
+	background-color: darkred;
+}
+#div_guide+a{
+	position: absolute;
+	right: 100px;
+	top: 30px;
+}

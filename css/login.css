@@ -1,0 +1,36 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	color: brown;
+	font-size: 32px;
+}
+#div_form{
+	width: 30%;
+	height: 400px;
+	background-color:aquamarine;
+	margin: 0 auto;
+	margin-top: 180px;
+	opacity: 0.5;	
+	text-align: center;	
+}
+input{
+	border: none;
+	margin-top: 50px;
+	margin-left: 15px;
+}
+#loginbtn{
+	width: 120px;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 15px;
+	margin-top: 65px;
+	font-size: 36px;
+}
+a{
+	margin-left: 25px;
+	font-size: 18px;
+	text-decoration: none;
+}
+#loginbtn:hover{
+	cursor: pointer;
+}
