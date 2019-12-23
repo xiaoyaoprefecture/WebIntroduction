@@ -13,10 +13,19 @@ $('#loginbtn').click(function(){
 		dataType:'json',
 		success:function(data){
 			var json1=data.data;
-			var success=data.status;						
-			for(var i=0;i<json1.length;i++){
-				console.log(json1[i].userName);
+			//判断后台返回的status，然后做出相关反应			
+			var status=data.status;	
+			console.log(status);
+			//如果是success就进入主页面
+			if(status=="success"){
+				//将用户名存储到localStorage中，便于下一个页面取值
+				localStorage.name=json1[0].userName;
+				localStorage.userAccount=json1[0].userAccount;
+				window.location.href="homePage.html";				
+			}else{
+				alert("账号密码不正确，请重新登录");
 			}
+			
 		},
 	});
 })

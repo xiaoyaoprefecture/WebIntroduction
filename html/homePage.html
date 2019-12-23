@@ -4,18 +4,40 @@
 		<meta charset="UTF-8">
 		<title>首页</title>
 		<link rel="stylesheet" href="../css/homePage.css" />
+		<script>
+			//通过localStorage获取用户名
+			function getUserNameAndUserAccount(){
+				var userName=localStorage["name"];
+				var userAccount=localStorage["userAccount"];
+				var user=document.getElementById("span_user");
+				user.innerText=userName;
+				//获取上一页的路径
+				var pre_url=document.referrer+'';
+				if(pre_url.indexOf('regist')!=-1){//包含注册的路径
+					alert("恭喜"+userName+"注册成功，您的账号是: "+userAccount);
+				}else{
+					console.log(pre_url);
+				}
+			}
+		</script>
 	</head>
-	<body background="../img/xingkong.jpg">
+	<body onload="getUserNameAndUserAccount()"  background="../img/xingkong.jpg">
 		<!--导航栏-->
+		
 		<div id="div_guide">
+			<!--显示用户昵称-->
+			<div id="div_user">
+				<span id="span_user"></span>
+			</div>
 			<ul>
-				<li>基本信息</li>
-				<li>兴趣爱好</li>
-				<li>我的学生</li>
+				<li>首页推荐</li>
+				<li>信息简介</li>
+				<li>学习成长</li>
+				<li>事业发展</li>
+				<li>爱情修炼</li>
 				<li>联系方式</li>
-				<li>我的情感</li>
 			</ul>
 		</div>
-		<a href="login.html">登录</a>
+		<a href="login.html">登录</a>		
 	</body>
 </html>

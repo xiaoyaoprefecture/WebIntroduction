@@ -23,7 +23,19 @@ $('#registBtn').click(function(){
 		},
 		dataType:'json',
 		success:function(data){
-			console.log(data);
+			var json1=data.data;
+			//判断后台返回的status，然后做出相关反应			
+			var status=data.status;	
+			console.log(status);
+			//如果是success就进入主页面
+			if(status=="success"){
+				//将用户名存储到localStorage中，便于下一个页面取值
+				localStorage.name=userName;
+				localStorage.userAccount=json1[0].userAccount;
+				window.location.href="homePage.html";				
+			}else{
+				alert("该账号已经被使用了");
+			}
 		},
 	});
 })

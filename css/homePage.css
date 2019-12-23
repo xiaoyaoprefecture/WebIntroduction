@@ -3,15 +3,26 @@
 	padding: 0px;
 	color: white;
 }
+#div_user{
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 45px;
+	text-align: center;
+	position:absolute;
+	top:10px;
+	left: 20px;
+	font-size: 12px;
+	background-color: aquamarine;
+}
 #div_guide{
-	width: 70%;
+	width: 60%;
 	height: 50px;
 	margin: 0 auto;
-	border: 1px solid red;
 	margin-top: 10px;
 }
 #div_guide ul li{
-	width: 14%;
+	width: 16%;
 	height: 50px;
 	line-height: 50px;
 	text-align: center;
